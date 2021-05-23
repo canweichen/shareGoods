@@ -1,0 +1,16 @@
+/* pages/location/location.wxss */
+page{
+  background-color: rgb(247, 247, 247);
+}
+.weui-media-box{
+  background: white;
+  margin: 10px 2% 0 2%;
+  border-radius: 5px;
+}
+.weui-media-box__title{
+  font-weight: 600;
+  font-size: 19px;
+}
+.weui-media-box__desc{
+  font-size: 12px;
+}

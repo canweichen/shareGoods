@@ -1,0 +1,88 @@
+<!--pages/person/person.wxml-->
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class='wx_person'>
+  <view class='wx_person_img'>
+    <image src='/pages/image/milk.png' class='head-img'></image>
+  </view>
+  <view class='wx_person_title'>
+    <view class='wx_person_title_f'>星月夜</view>
+    <view class='wx_person_title_f'>157****2522</view>
+  </view>
+</view>
+
+<navigator url='' hover-class="none">
+  <view class="wx_all_detail">
+      <image src='/pages/image/tui.png' class='wx_all_left_img'></image>
+      <view class='inline_tag wx_all_title'>设置默认推广位</view>
+      <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+  </view>
+</navigator>
+
+<navigator url='' hover-class="none">
+  <view class="wx_all_detail">
+      <image src='/pages/image/redpacket.png' class='wx_all_left_img'></image>
+      <view class='inline_tag wx_all_title'>我发出的福利</view>
+      <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+  </view>
+</navigator>
+
+<navigator url='' hover-class="none">
+  <view class="wx_all_detail">
+      <image src='/pages/image/order.png' class='wx_all_left_img'></image>
+      <view class='inline_tag wx_all_title'>订单查询</view>
+      <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+  </view>
+</navigator>
+
+<navigator url='' hover-class="none">
+  <view class="wx_all_detail" class="cut-line">
+      <image src='/pages/image/newp.png' class='wx_all_left_img'></image>
+      <view class='inline_tag wx_all_title'>新手引导</view>
+      <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+  </view>
+</navigator>
+
+<navigator url='' hover-class="none">
+  <view class="wx_all_detail">
+      <image src='/pages/image/share.png' class='wx_all_left_img'></image>
+      <view class='inline_tag wx_all_title'>分享给好友</view>
+      <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+  </view>
+</navigator>
+
+<navigator url='' hover-class="none">
+  <view class="wx_all_detail">
+      <image src='/pages/image/commont.png' class='wx_all_left_img'></image>
+      <view class='inline_tag wx_all_title'>去评分</view>
+      <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+  </view>
+</navigator>
+
+<navigator url='' hover-class="none">
+  <view class="wx_all_detail" class="cut-line">
+      <image src='/pages/image/set.png' class='wx_all_left_img'></image>
+      <view class='inline_tag wx_all_title'>设置</view>
+      <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+  </view>
+</navigator>
+
+<navigator url='' hover-class="none">
+  <view class="wx_all_detail">
+      <image src='/pages/image/help.png' class='wx_all_left_img'></image>
+      <view class='inline_tag wx_all_title'>帮助与反馈</view>
+      <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+  </view>
+</navigator>
+

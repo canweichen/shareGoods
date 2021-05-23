@@ -1,0 +1,122 @@
+/* pages/income/income.wxss */
+page{
+  background-color: #eee;
+}
+.wx_show_account{
+  background: #ff7300;
+  height: 100px;
+  color: white;
+  font-size: 18px;
+  padding: 0 5%;
+}
+.wx_show_title{
+  height:40px;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+.wx_show_money{
+  font-size: 25px;
+  line-height: 50px;
+  width: 80%;
+}
+.wx_show_btn{
+  width: 15%;
+  border:1px solid white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.wx_all_detail{
+  background: white;
+  height: 40px;
+  line-height: 40px;
+  padding:5px 5%;
+}
+.wx_all_title{
+  line-height: 30px;
+  font-size: 16px;
+  padding-left: 5px;
+  width: 85%;
+  color: #8a8a8a;
+}
+.wx_all_left_img{
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+}
+.wx_all_right_img{
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+}
+
+.wx_all_income{
+  font-size:15px;
+  background: white;
+  color: #8a8a8a;
+  padding: 0 5%;
+}
+.wx_all_induction{
+  padding:0 5%;
+  height: 36px;
+  line-height: 36px;
+  font-size: 13px;
+  color: #8a8a8a; 
+  background: rgb(245, 243, 243);
+}
+.wx_all_left{
+  width: 40%;
+  padding-left: 20px; 
+  height: 70px;
+}
+.wx_all_right{
+  width: 40%;
+  padding-left: 20px; 
+  height: 70px;
+}
+.wx_all_left_height{
+  line-height: 35px;
+}
+.wx_all_look_more{
+  text-align: center;
+  color: orangered;
+  line-height: 40px;
+  border-top:1px solid #eee;
+}
+
+.extable_title{
+  padding: 0 5%;
+  font-size: 15px;
+  color: #8a8a8a;
+  height: 36px;
+  line-height: 36px;
+}
+.wx_all_nav_bar{
+  background: white;
+  padding: 15px 5%;
+  font-size: 16px;
+  color: orangered;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+.wx_all_nav_child{
+  height: 36px;
+  line-height: 36px;
+  width: 22%;
+  border:1px solid orangered;
+}
+.wx_all_remove_line{
+  border-right:none;
+}
+.wx_nav_on{
+  background: orangered;
+  color: white;
+}
+.wx_left_radius{
+  border-top-left-radius:18px;
+  border-bottom-left-radius:18px;
+}
+.wx_right_radius{
+  border-top-right-radius:18px;
+  border-bottom-right-radius:18px;
+}

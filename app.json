@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/detail/detail",
+    "pages/index/other/other",
+    "pages/index/share/share",
+    "pages/tool/tool",
+    "pages/location/location",
+    "pages/income/income",
+    "pages/chart/chart",
+    "pages/person/person",
+    "pages/outurl/outurl"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "orangered",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "/pages/image/find.png",
+        "selectedIconPath": "/pages/image/find_on.png"
+      },
+      {
+        "pagePath": "pages/tool/tool",
+        "text": "工具",
+        "iconPath": "/pages/image/tool.png",
+        "selectedIconPath": "/pages/image/tool_on.png"
+      },
+      {
+        "pagePath": "pages/location/location",
+        "text": "场景",
+        "iconPath": "/pages/image/location.png",
+        "selectedIconPath": "/pages/image/location_on.png"
+      },
+      {
+        "pagePath": "pages/income/income",
+        "text": "收益",
+        "iconPath": "/pages/image/income.png",
+        "selectedIconPath": "/pages/image/income_on.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "/pages/image/person.png",
+        "selectedIconPath": "/pages/image/person_on.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

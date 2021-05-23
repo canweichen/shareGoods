@@ -1,0 +1,206 @@
+<!--index.wxml-->
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+        <!--顶部导航-->
+       <!-- <view class="weui-flex">
+            
+            <view><view class="placeholder"><image src='/pages/image/message_icon.png' class='top_bar'></image></view></view>
+            
+            <view class="weui-flex__item"><view class="placeholder">淘宝联盟</view></view>
+            
+            <view><view class="placeholder"><image src='/pages/image/search_icon.png' class='top_bar'></image></view></view>
+        </view>-->
+        <view class="search {{scroll_top < 800 && scroll_top >= 50 ? 'search_fixed' : ''}}" hidden="{{pullRefresh}}">
+            <input class="{{scroll_top < 50 ? 'search_input' : 'search_input_on'}}" placeholder='输入您需要查找的优惠商品' placeholder-style="color:{{scroll_top < 50 ? 'white' : 'black'}}"></input>
+             <icon type="search" color='grey' size="20" style='position:absolute;right:10%;top:18px;'/>
+        </view>
+        <!--轮播图-->
+        <swiper
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          interval="{{interval}}"
+          duration="{{duration}}"
+          circular="true"
+          bindchange = "bannerChange" 
+        >
+          <block wx:for="{{imgUrls}}" wx:key="key">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image img" width="150" height="150"/>
+            </swiper-item>
+          </block>
+        </swiper>
+
+        <!--菜单按钮-->
+        <view class="page__bd">
+            <view class="weui-grids">
+                <navigator url="/pages/outurl/outurl" class="weui-grid weui-grid-menu" hover-class="none">
+                    <image class="weui-grid__icon" src="/pages/image/link.png" />
+                    <view class="weui-grid__label">链接转换</view>
+                </navigator>
+                <navigator url="" class="weui-grid weui-grid-menu" hover-class="none">
+                    <image class="weui-grid__icon" src="/pages/image/collect.png" />
+                    <view class="weui-grid__label">收藏夹</view>
+                </navigator>
+                <navigator url="/pages/index/other/other?type=5" class="weui-grid weui-grid-menu" hover-class="none">
+                    <image class="weui-grid__icon" src="/pages/image/discount.png" />
+                    <view class="weui-grid__label">促销活动</view>
+                </navigator>
+                <navigator url="" class="weui-grid weui-grid-menu" hover-class="none">
+                    <image class="weui-grid__icon" src="/pages/image/invite.png" />
+                    <view class="weui-grid__label">拉新活动</view>
+                </navigator>
+                <navigator url="" class="weui-grid weui-grid-menu" hover-class="none">
+                    <image class="weui-grid__icon" src="/pages/image/school.png" />
+                    <view class="weui-grid__label">新手上路</view>
+                </navigator>
+            </view>
+        </view>
+
+        <!--广告位-->
+        <view class='bd_img'>
+            <image src="https://selfcenter.top/tp_front/public/uploader/xxxx.jpg" ></image>
+        </view>
+        <view class="empty_body"></view>
+        <!--商品热销类目-->
+        <view class="weui-flex">
+            <view class="weui-flex__item" bindtap='goToPage' data-id='0'>
+                <view class="weui_fiex_big_font">今日上新</view>
+                <view class="weui_fiex_small_font">每日新券优先推</view>
+                <image src='/pages/image/food.png' class='weui-flex-menu-img'></image>
+            </view>
+            <view class="weui-flex__item weui_right_border"  bindtap='goToPage' data-id='0'>
+              <view class="">
+                  <image src='/pages/image/xia.png' class='weui-flex-menu-img' style='margin-top:40px;'></image>
+              </view>
+            </view>
+              <view class="weui-flex__item weui_right_border" bindtap='goToPage' data-id='1'>
+                  <view class="">
+                      <view class="weui_fiex_big_font">日用快消</view>
+                      <view class="weui_fiex_small_font">好券不等人</view>
+                      <image src='/pages/image/clear.png' class='weui-flex-menu-img'></image>
+                  </view>
+              </view>
+            <view class="weui-flex__item" bindtap='goToPage' data-id='2'>
+                <view class="">
+                    <view class="weui_fiex_big_font">拼团</view>
+                    <view class="weui_fiex_small_font">成团赚更多</view>
+                    <image src='/pages/image/noodle.png' class='weui-flex-menu-img'></image>
+                </view>
+            </view>
+        </view>
+
+        <view class="empty_body"></view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view>
+                <view class="weui-flex" bindtap='goToPage' data-id='3'>
+                  <view class="weui-flex__item">
+                      <view class='weui_fiex_big_font'>热销榜</view>
+                      <view class='weui_fiex_small_font'>聚划算大额好券</view>
+                  </view>
+                  <view class="weui-flex__item weui_right_border">
+                      <view><image src='/pages/image/clothes.png' class='weui-flex-menu-img'></image></view>
+                  </view>
+                </view>
+            </view></view>
+
+            <view class="weui-flex__item"><view>
+                <view class="weui-flex"  bindtap='goToPage' data-id='4'>
+                    <view class="weui-flex__item">
+                        <view class='weui_fiex_big_font'>人气榜</view>
+                        <view class='weui_fiex_small_font'>淘宝客热推好货</view>
+                    </view>
+                    <view class="weui-flex__item"><view>
+                        <image src='/pages/image/queen.png' class='weui-flex-menu-img'></image>
+                    </view></view>
+                </view>
+            </view></view>
+        </view>
+
+        <view class="page__bd">
+            <view class="weui-grids">
+                <navigator url="/pages/index/other/other?type=5" class="weui-grid weui_grid_type" hover-class="none">
+                    <view class="weui-grid__label grid_title_font">品牌榜</view>
+                    <image class="weui-grid__icon" src="/pages/image/bao.png" />
+                </navigator>
+                <navigator url="/pages/index/other/other?type=6" class="weui-grid weui_grid_type" hover-class="none">
+                    <view class="weui-grid__label grid_title_font">母婴榜</view>
+                    <image class="weui-grid__icon" src="/pages/image/milk.png" />
+                </navigator>
+                <navigator url="/pages/index/other/other?type=7" class="weui-grid weui_grid_type" hover-class="none">
+                    <view class="weui-grid__label grid_title_font">高佣榜</view>
+                    <image class="weui-grid__icon" src="/pages/image/kong.png" />
+                </navigator>
+                <navigator url="/pages/index/other/other?type=8" class="weui-grid weui_grid_type" hover-class="none">
+                    <view class="weui-grid__label grid_title_font">大额券</view>
+                    <image class="weui-grid__icon" src="/pages/image/face.png" />
+                </navigator>
+            </view>
+        </view>
+
+        <!--好券直播-->
+        <view class="empty_body"></view>
+        <view style="text-align:center;letter-spacing:10px;color:orangered;">好券直播</view>
+        <view class=''>
+            <view class="scroll_box {{scroll_top >= 700 ? 'scroll_box_fixed' : ''}}">
+              <scroll-view scroll-x >
+                <view id='0' class="scroll-view-item_H {{switch_on == 0 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>综合</view>
+                <view id='1' class="scroll-view-item_H {{switch_on == 1 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>女装</view>
+                <view id='2' class="scroll-view-item_H {{switch_on == 2 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>母婴</view>
+                <view id='3' class="scroll-view-item_H {{switch_on == 3 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>美妆护肤</view>
+                <view id='4' class="scroll-view-item_H {{switch_on == 4 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>生活用品</view>
+                <view id='5' class="scroll-view-item_H {{switch_on == 5 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>鞋</view>
+                <view id='6' class="scroll-view-item_H {{switch_on == 6 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>食品</view>
+                <view id='7' class="scroll-view-item_H {{switch_on == 7 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>办公用品</view>
+                <view id='8' class="scroll-view-item_H {{switch_on == 8 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>数码家电</view>
+                <view id='9' class="scroll-view-item_H {{switch_on == 9 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>男装</view>
+                <view id='10' class="scroll-view-item_H {{switch_on == 10 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>内衣</view>
+                <view id='11' class="scroll-view-item_H {{switch_on == 11 ? 'scroll-view-item_H_on' : ''}}" 
+                bindtap='switchAndGetGoods'>箱包配饰</view>
+              </scroll-view>
+            </view> 
+            <!--商品列表-->
+            <block wx:for="{{goodsList}}" wx:key="key">
+              <navigator url="/pages/index/detail/detail?gid={{item.gid}}&cid={{item.cid}}" class='panne'  hover-class="none">
+                  <view class="panne_left">
+                      <image class="" src="{{item.pic}}"></image>
+                  </view>
+                  <view class="panne_middle">
+                      <view class="panne_title">{{item.title}}</view>
+                      <view class="price_desc">现价 ￥{{item.org_price}} 月销 {{item.sales_num}}件</view>
+                      <view class="discount_desc">券后价 <view class='discount_price'>￥{{item.price}}</view></view>
+                      <view class="stock_desc">券 | {{item.quan_price}}元 余{{item.sales_num}}件</view>
+                  </view>
+                  <view class='panne_right'>
+                      <image src='/pages/image/share.png'></image>
+                      <view>赚 ￥{{filters.toFix(item.price*item.commission/100)}} </view>
+                  </view>
+              </navigator>  
+            </block>
+            
+
+            <view class="weui-loadmore" hidden='{{goLoading}}'>
+                <view class="weui-loading"></view>正在加载
+            </view>
+            <view class="weui-loadmore weui-loadmore_line" hidden='{{emptyData}}'>
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line">已是我的底线</view>
+            </view>
+        </view>
+
+         <view class="empty_body"></view>
+
+
+
+    </view>
+</view>

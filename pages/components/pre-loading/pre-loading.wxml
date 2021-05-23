@@ -1,0 +1,6 @@
+<!--pages/components/pre-loading/pre-loading.wxml-->
+<view hidden='{{preventHidden}}' class='default_img'>
+    <view class="default_img_middle">
+        <image src='/pages/image/loading.gif' class="default_img_show"></image>
+    </view> 
+</view>

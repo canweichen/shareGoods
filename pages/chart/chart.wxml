@@ -1,0 +1,49 @@
+<!--pages/chart/chart.wxml-->
+<view class='navtab'>
+  <view bindtap='switchChartTab' data-id='1' class='navtab-child {{t_id == 1 ? "navtab-child_on" : ""}}'>今日</view>
+  <view bindtap='switchChartTab' data-id='2' class='navtab-child {{t_id == 2 ? "navtab-child_on" : ""}}'>昨日</view>
+  <view bindtap='switchChartTab' data-id='3' class='navtab-child {{t_id == 3 ? "navtab-child_on" : ""}}'>近7日</view>
+  <view bindtap='switchChartTab' data-id='4' class='navtab-child {{t_id == 4 ? "navtab-child_on" : ""}}'>近30日</view>
+</view>
+<view style='height:40px;'></view>
+<view class='show-date'>
+  <view class='show-date-child'>2019-05-11</view>
+  <view class='show-date-child' style='text-align:right;'>截至到今天20时</view>
+</view>
+
+<view hidden='{{is_show ? true : false}}'>
+  <view style='height:35px;line-height:35px;padding-left:15px;clear:both;font-size:14px;margin-bottom:15px;'>点击数:102</view>
+  <view class="container">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+  <view style='height:35px;line-height:35px;padding-left:15px;clear:both;font-size:14px;;'>付款笔数:50</view>
+  <view class="container">
+    <ec-canvas id="mychart-dom-bar_" canvas-id="mychart-bar" ec="{{ ecc }}"></ec-canvas>
+  </view>
+</view>
+
+<view hidden='{{is_show ? false : true}}'>
+  <view class='wx_all_income'>
+      <view class='inline_tag wx_all_left'>
+          <view class='wx_all_left_height'>点击数</view>
+          <view class='wx_all_left_height'>0</view>
+      </view>
+      <view class='inline_tag wx_all_right'>
+          <view class='wx_all_left_height'>付款订单(笔)</view>
+          <view class='wx_all_left_height'>0</view>
+      </view>
+      <view class='inline_tag wx_all_left'>
+          <view class='wx_all_left_height'>付款预估收入(元)</view>
+          <view class='wx_all_left_height'>0.00</view>
+      </view>
+      <view class='inline_tag wx_all_right'>
+          <view class='wx_all_left_height'>结算预估收入(元)</view>
+          <view class='wx_all_left_height'>0.00</view>
+      </view>
+  </view>
+
+  <view class="container" id="contain">
+    <ec-canvas id="mychart-dom-bar__" canvas-id="mychart-bar" ec="{{ eccc }}"></ec-canvas>
+  </view>
+</view>

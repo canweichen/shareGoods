@@ -1,0 +1,2 @@
+/* pages/outurl/outurl.wxss */
+.out-link{background:red;height:100rpx;width:100rpx}

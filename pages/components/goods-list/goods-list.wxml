@@ -1,0 +1,20 @@
+<!--pages/components/goods-list/goods-list.wxml-->
+<!--商品列表-->
+<wxs module="filters" src="../../../utils/filters.wxs"></wxs>
+<block wx:for="{{gList}}" wx:key="key">
+  <view bindtap='_goToDetail' data-gid="{{item.gid}}" data-cid="{{item.cid}}" class='panne'  hover-class="none">
+      <view class="panne_left">
+          <image class="left_img" src="{{item.pic}}"></image><!--../../image/milk.png-->
+      </view>
+      <view class="panne_middle">
+          <view class="panne_title">{{item.title}}</view>
+          <view class="price_desc">现价 ￥{{item.org_price}} 月销 {{item.sales_num}}件</view>
+          <view class="discount_desc">券后价 <view class='discount_price'>￥{{item.price}}</view></view>
+          <view class="stock_desc">券 | {{item.quan_price}}元 </view>
+      </view>
+      <view class='panne_right'>
+          <view catchtap='_goToShare' data-gid="{{item.gid}}"><image class="right_img" src='/pages/image/share.png'></image></view>
+          <view>赚 ￥{{filters.toFix(item.price*item.commission/100)}} </view>
+      </view>
+  </view>  
+</block>

@@ -1,0 +1,42 @@
+<!--pages/index/detail/detail.wxml-->
+<wxs module="filters" src="../../../utils/filters.wxs"></wxs>
+<pre-loading prevent-hidden="{{def_img}}"></pre-loading>
+<view>
+    <image class="big-img" src='{{goods.pic}}'></image>
+    <view class="goods_title">{{goods.title}}</view>
+    <view class='qprice'>
+        <span class='qborder'>券后价</span>
+        <a class='sale_price'>
+          <span style="font-size:13px;">￥</span>
+          <span>{{goods.price}}</span>
+        </a>
+    </view>
+    <view class='qprice'>
+        <span class="org">现价：￥<del>{{goods.org_price}}</del></span>
+        <span class="already">已售{{goods.sales_num}}件</span>
+    </view>
+</view>
+
+<view class='qdetail'>
+    <view style='qdetail-price'>
+        <image src='/pages/image/card.png' class='small-img'></image>
+        优惠券 <span class="text_color">{{goods.quan_price}}元</span> (满{{goods.quan_condition}}元使用)
+    </view>
+    <view>
+        <image src='/pages/image/money.png' class='small-img'></image>
+        佣金 <span class="text_color">{{goods.commission}}%</span> （预计￥{{filters.toFix(goods.price*goods.commission/100)}}）
+    </view>
+     <view class="text_color">
+        努力升级可以获得更高的佣金哦~
+    </view>
+</view>
+
+<view class='empty_body'></view>
+<view class='other_title'>相似商品</view>
+
+<!--商品列表-->
+<goods-list gList="{{gList}}"></goods-list>
+
+<view class='empty_body'></view>
+<view class='empty_botton'>别拉了,没有更多啦!</view>
+<navigator url='../share/share?gid={{goods.gid}}' class='fixed_share'>立即分享</navigator>

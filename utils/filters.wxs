@@ -1,0 +1,6 @@
+var filters = {
+  toFix:function(num){
+    return num.toFixed(2)
+  }
+}
+module.exports = {toFix:filters.toFix}

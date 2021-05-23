@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "pre-loading":"../../components/pre-loading/pre-loading",
+    "goods-list":"../../components/goods-list/goods-list"
+  },
+  "navigationBarTitleText":""
+}

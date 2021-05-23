@@ -1,0 +1,70 @@
+/* pages/chart/chart.wxss */
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding:0;
+} 
+#mychart-dom-bar{ position: relative;
+  top:15%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px
+  }
+  #mychart-dom-bar_{ position: relative;
+  top:70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px
+  }
+#mychart-dom-bar__{
+  position: relative;
+  top:15%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px
+}
+.show-hide{display:none}
+.navtab{position:fixed;width:100%;height:40px;line-height: 40px;z-index:10;background:white;text-align: center;font-size:16px;border-top: 1px solid #eee;border-bottom: 1px solid #eee;}
+.navtab .navtab-child{width:25%;float:left;}
+.navtab .navtab-child_on{border-bottom:1px solid orangered;color:orangered;}
+.show-date{height:30px;line-height: 30px;font-size:15px;padding:10px 15px;background: #eee;}
+.show-date-child{width: 50%;float: left;}
+
+.wx_all_income{
+  font-size:15px;
+  background: white;
+  color: #8a8a8a;
+  padding: 0 5%;
+}
+.wx_all_induction{
+  padding:0 5%;
+  height: 36px;
+  line-height: 36px;
+  font-size: 13px;
+  color: #8a8a8a; 
+  background: rgb(245, 243, 243);
+}
+.wx_all_left{
+  width: 40%;
+  padding-left: 20px; 
+  height: 70px;
+}
+.wx_all_right{
+  width: 40%;
+  padding-left: 20px; 
+  height: 70px;
+}
+.wx_all_left_height{
+  line-height: 35px;
+}

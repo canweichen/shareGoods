@@ -1,0 +1,23 @@
+<!--pages/location/location.wxml-->
+<view class="weui-panel__bd">
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/pages/image/building.png" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">手淘红人小店</view>
+            <view class="weui-media-box__desc">5s轻松打造店铺</view>
+            <view class="weui-media-box__desc">专属粉丝阵地</view>
+        </view>
+    </navigator>
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/pages/image/tv-set.png"/>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">3.7女神驾到</view>
+            <view class="weui-media-box__desc">女神节大牌上新</view>
+            <view class="weui-media-box__desc">精选好货</view>
+        </view>
+    </navigator>
+</view>

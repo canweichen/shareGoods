@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText":"商城联盟",
+  "onReachBottomDistance":100,
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor":"#cc3333",
+  "navigationBarTextStyle":"white"
+}

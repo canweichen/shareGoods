@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pre-loading": "../../components/pre-loading/pre-loading"
+  },
+  "navigationBarTitleText":"分享"
+}

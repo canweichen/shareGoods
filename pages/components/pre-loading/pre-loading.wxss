@@ -1,0 +1,23 @@
+/* pages/components/pre-loading/pre-loading.wxss */
+.default_img{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:30;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  text-align: center; 
+  display: table;
+}
+.default_img_middle{
+  display: table-cell; 
+  vertical-align: middle; 
+}
+.default_img_show{
+  display: inline-block;
+  width:200px;
+  height:200px;
+}

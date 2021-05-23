@@ -1,0 +1,23 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.inline_tag{
+  display: inline-block;
+}
+.default_img{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:30;
+  background: white;
+  text-align: center; 
+  display: table;
+}

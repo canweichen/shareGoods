@@ -1,0 +1,28 @@
+<!--pages/tool/tool.wxml-->
+<view class='selTool'>
+    <view class='contain'>选品工具</view>
+    <view class="page__bd">
+        <view class="weui-grids">
+            <navigator url="/pages/outurl/outurl" class="weui-grid weui-grid-menu" hover-class="none">
+                <image class="weui-grid__icon" src="/pages/image/link.png" />
+                <view class="weui-grid__label">链接转换</view>
+            </navigator>
+            <navigator url="" class="weui-grid weui-grid-menu" hover-class="none">
+                <image class="weui-grid__icon" src="/pages/image/collect.png" />
+                <view class="weui-grid__label">收藏夹</view>
+            </navigator>
+        </view>
+    </view>
+</view>
+
+<view class='selTool'>
+    <view class='contain'>营销玩法</view>
+    <view class="page__bd">
+        <view class="weui-grids">
+            <navigator url="/pages/outurl/outurl" class="weui-grid weui-grid-menu" hover-class="none">
+                <image class="weui-grid__icon" src="/pages/image/redpacket.png" />
+                <view class="weui-grid__label">福利红包</view>
+            </navigator>
+        </view>
+    </view>
+</view>

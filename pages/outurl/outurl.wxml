@@ -1,0 +1,7 @@
+<!--pages/outurl/outurl.wxml-->
+<!--<web-view src="https://hx.qq.com/zlkdatasys/mct/proj_1/download.shtml?media=20180320wx&back=cururl"> </web-view>-->
+<!--https://uland.taobao.com/quan/detail?sellerId={{sid}}&activityId={{qid}}-->
+<view
+  animation="{{animationData}}"
+  class="out-link"
+></view>

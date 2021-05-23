@@ -1,0 +1,67 @@
+<!--pages/income/income.wxml-->
+<view class='wx_show_account'>
+    <view class="wx_show_title">可提现金额</view>
+    <view>
+        <view class='inline_tag wx_show_money'>2.03 <view class='inline_tag' style='font-size:18px;'>元</view></view>
+        <view class='inline_tag wx_show_btn'>提现</view>
+    </view>
+</view>
+
+<view class="wx_all_detail">
+    <image src='/pages/image/wallet.png' class='wx_all_left_img'></image>
+    <view class='inline_tag wx_all_title'>收入明细</view>
+    <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+</view>
+
+<view class='wx_all_income' style='margin-top:15px;'>
+    <view class='inline_tag wx_all_left'>
+        <view class='wx_all_left_height'>上月预估收入(元)</view>
+        <view class='wx_all_left_height'>0.00</view>
+    </view>
+    <view class='inline_tag wx_all_right'>
+        <view class='wx_all_left_height'>本月预估收入(元)</view>
+        <view class='wx_all_left_height'>0.00</view>
+    </view>
+</view>
+<view class="wx_all_induction">每月20号结算上月预估收入，建议21号再进行提现</view>
+
+<view class='extable_title'>CPS报表</view>
+<view class="wx_all_detail">
+    <image src='/pages/image/record.png' class='wx_all_left_img'></image>
+    <view class='inline_tag wx_all_title'>全部订单明细</view>
+    <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+</view>
+<view class="wx_all_nav_bar">
+    <view data-id='1' bindtap='switch_bar' class="inline_tag wx_all_nav_child wx_all_remove_line wx_left_radius {{switch_nav_bar == 1 ? 'wx_nav_on' : ''}}">今日</view>
+    <view data-id='2' bindtap='switch_bar' class="inline_tag wx_all_nav_child wx_all_remove_line {{switch_nav_bar == 2 ? 'wx_nav_on' : ''}}">昨日</view>
+    <view data-id='3' bindtap='switch_bar' class="inline_tag wx_all_nav_child wx_all_remove_line {{switch_nav_bar == 3 ? 'wx_nav_on' : ''}}">近7日</view>
+    <view data-id='4' bindtap='switch_bar' class="inline_tag wx_all_nav_child wx_all_remove_line wx_right_radius {{switch_nav_bar == 4 ? 'wx_nav_on' : ''}}">近30日</view>
+</view>
+<view class='wx_all_income'>
+    <view class='inline_tag wx_all_left'>
+        <view class='wx_all_left_height'>点击数</view>
+        <view class='wx_all_left_height'>0</view>
+    </view>
+    <view class='inline_tag wx_all_right'>
+        <view class='wx_all_left_height'>付款订单(笔)</view>
+        <view class='wx_all_left_height'>0</view>
+    </view>
+     <view class='inline_tag wx_all_left'>
+        <view class='wx_all_left_height'>付款预估收入(元)</view>
+        <view class='wx_all_left_height'>0.00</view>
+    </view>
+    <view class='inline_tag wx_all_right'>
+        <view class='wx_all_left_height'>结算预估收入(元)</view>
+        <view class='wx_all_left_height'>0.00</view>
+    </view>
+    <navigator url='../chart/chart' class="wx_all_look_more" hover-class='none'>查看更多数据>></navigator> 
+</view>
+
+<view class='extable_title'>CPA报表</view>
+<view class="wx_all_detail">
+    <image src='/pages/image/detail.png' class='wx_all_left_img'></image>
+    <view class='inline_tag wx_all_title'>分月结算明细</view>
+    <image src='/pages/image/next.png' class='wx_all_right_img'></image>
+</view>
+
+<view style='height:15px;'></view>

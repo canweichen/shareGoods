@@ -1,0 +1,9 @@
+/* pages/index/share/share.wxss */
+.introduct{font-size:13px;background: orangered;height:30px;line-height:30px;padding-left:15px;color:white;}
+.detail{margin:10px 10px;background: rgb(248, 245, 245);height:220px;border-radius:10px;}
+.detail .normal{min-height:25px;line-height:25px;font-size:13px;padding:0 10px;}
+.tip{padding:15px 10px;font-size:14px;color:grey;}
+.share-button{position: fixed;bottom:0;width:100%;height:150px;border-top:1px solid #eee;margin:0 10px;font-size: 14px;color:grey;text-align:center;}
+.share-fix{width:33%;padding-top:10px;float:left;position:relative;}
+.share-fix-button{position:absolute;width:100%;height:100%;top:0;bottom: 0;opacity: 0;}
+.share-to{padding-top:10px;text-align:left;}

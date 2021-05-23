@@ -1,0 +1,35 @@
+<wxs module="filters" src="../../../utils/filters.wxs"></wxs>
+<pre-loading prevent-hidden="{{def_img}}"></pre-loading>
+
+<view class='introduct'>
+您的佣金预计为{{goods.commission}}%(预计￥{{filters.toFix(goods.commission*goods.price/100)}})
+</view>
+
+<view class='detail'>
+  <view class='normal' style='padding-top:10px;'>{{goods.title}}</view>
+  <view class='normal'>【在售价】{{goods.price}}元</view>
+  <view class='normal'>【券后价】{{goods.org_price}}元</view>
+  <view class='normal'>【下单链接】{选择分享渠道后自动生成链接}</view>
+  <view class='normal'>-----------------------</view>
+  <view class='normal'>复制这条信息，{￥选择分享渠道后自动生成淘口令￥}，到【手机淘宝】即可查看</view>
+</view>
+
+<view style='margin:0 10px;'>
+  <button class="weui-btn" type="primary" bindtap='copyContent'>复制文案</button>
+</view>
+
+<view class='tip'>
+  <view>请不要更改'{}'之间的文字哦~</view>
+  <view>联盟仅提供技术支持，请自行确保分享内容真实合法(如不使用淘宝内部优惠券、好评返现等虚假描述)</view>
+</view>
+
+<view class='share-button'>
+  <view class='share-to'>文案分享到</view>
+  <view class='share-fix'>
+    <icon type="success" size="70"></icon>
+    <button open-type="share" bindtap='shareWeChat' class="share-fix-button"></button>
+    <view>微信</view>
+  </view>
+  <view class='share-fix' bindtap='shareWeBo'><icon type="warn" size="70"></icon><view>微博</view></view>
+  <view class='share-fix' bindtap='shareQQ'> <icon type="waiting" size="70"></icon><view>QQ</view></view>  
+</view>

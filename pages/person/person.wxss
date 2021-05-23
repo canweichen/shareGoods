@@ -1,0 +1,80 @@
+/* pages/person/person.wxss */
+page{
+  background: #eee;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.head-img{
+  width:59px;
+  height:59px;
+}
+.cut-line{
+  margin-top:15px;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.wx_all_detail{
+  background: white;
+  height: 40px;
+  line-height: 40px;
+  padding:5px 4%;
+  border-bottom: 1px solid #eee;
+}
+.wx_all_title{
+  line-height: 30px;
+  font-size: 16px;
+  padding-left: 10px;
+  width: 85%;
+  color: #8a8a8a;
+}
+.wx_all_left_img{
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+}
+.wx_all_right_img{
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+}
+
+.wx_person{
+  background: #4bddf7;
+  padding:15px 5%;
+  height: 60px;
+  width: 90%;
+  color: white;
+  font-size: 16px;
+}
+.wx_person_img{
+  float: left;
+  margin-right:15px;
+  width: 60px;
+  height: 59px;
+  border-radius: 30px;
+  text-align: center;
+}
+.wx_person_title{
+  float: left;
+  height: 60px;
+  width: 60%;
+}
+.wx_person_title_f{
+  line-height: 30px;
+}
