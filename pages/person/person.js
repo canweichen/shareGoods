@@ -9,7 +9,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    token:'',
   },
 
   //事件处理函数
@@ -18,19 +19,79 @@ Page({
       url: '../logs/logs'
     })
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  _getUserProfile:function(e) {
+    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
+    // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+    let _this = this;
+    wx.getUserProfile({
+      desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+       _this. _updateUserInfo(res.userInfo);
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      },
+      fail:() =>{
+        wx.showToast({
+          title: '授权失败',
+          icon: 'fail',
+          duration: 1500
+        })
+      }
+    })
+  },
+
+  _updateUserInfo:function($userInfo){
+      //获取token
+      let token = wx.getStorageSync('token');
+      console.log(token);
+      wx.request({
+        url: getApp().globalData.url_path+"/index.php/wechat/Login/update",
+        method:"POST",
+        header:{
+          'x-token':token,
+          'content-type':'application/json'
+        },
+        data:$userInfo,
+        success (res){
+          wx.showToast({
+            title: '更新成功',
+          })
+        },
+        fail (res){
+          wx.showToast({
+            title: res.msg,
+            icon:'fail',
+            duration:1500
+          })
+        }
+      })
+  },
+  _checkUserInfoIsOk:function(){
+    const that = this;
+    wx.request({
+      url: getApp().globalData.url_path+'/index.php/wechat/Login/me',
+      method:'GET',
+      header:{
+        'x-token' : wx.getStorageSync('token'),
+        'content-type':'application/json'
+      },
+      success (res){
+        if(res.data.status == 200){
+          that.setData({
+            hasUserInfo:res.data.is_ok
+          })
+        }
+        console.log(res);
+      }
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(1);
+    this._checkUserInfoIsOk();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -63,28 +124,28 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(2);
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(3);
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log(4);
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log(5);
+
   },
 
   /**

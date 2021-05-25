@@ -9,7 +9,8 @@
     "pages/income/income",
     "pages/chart/chart",
     "pages/person/person",
-    "pages/outurl/outurl"
+    "pages/outurl/outurl",
+    "pages/person/details/info"
   ],
   "window": {
     "backgroundTextStyle": "light",
