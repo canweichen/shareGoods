@@ -36,7 +36,7 @@ page{
   line-height: 30px;
   font-size: 16px;
   padding-left: 5px;
-  width: 85%;
+  width: 83%;
   color: #8a8a8a;
 }
 .wx_all_left_img{
@@ -60,7 +60,7 @@ page{
   padding:0 5%;
   height: 36px;
   line-height: 36px;
-  font-size: 13px;
+  font-size: 11px;
   color: #8a8a8a; 
   background: rgb(245, 243, 243);
 }

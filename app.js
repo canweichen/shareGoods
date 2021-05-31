@@ -7,10 +7,43 @@ App({
     wx.setStorageSync('logs', logs)
     // 登录
     wx.checkSession({
-      success () {
+      success (){
+        //校验自定义token是否存在
+        let token = wx.getStorageSync('token')
+        if(!token){
+          wx.login({
+            success: res => {
+              wx.request({
+                url: 'https://selfcenter.top/tp_front/public/index.php/wechat/Login/index',
+                data:{code:res.code},
+                success:function(data){
+                  if(data.data.status == 200){
+                    wx.setStorage({
+                      key: 'token',
+                      data: data.data.token,
+                    });
+                    wx.setStorage({
+                      key: 'is_ok',
+                      data: data.data.is_ok,
+                    })
+                  }else{
+                    wx.showToast({
+                      title: data.data.msg,
+                      icon: 'fail',
+                      duration: 1500
+                    })
+                  }
+                }
+              })
+              // 发送 res.code 到后台换取 openId, sessionKey, unionId
+            }
+          })
+        }
+      },
+      fail () {
         // session_key 已经失效，需要重新执行登录流程
         wx.login({
-          fail: res => {
+          success: res => {
             wx.request({
               url: 'https://selfcenter.top/tp_front/public/index.php/wechat/Login/index',
               data:{code:res.code},
